@@ -1,0 +1,8 @@
+body {
+  font-size: 1.5rem;
+  color: black;
+}
+.wrapper {
+  background: url(./rsc/bgphone.jpg);
+  min-height: 100vh;
+}
