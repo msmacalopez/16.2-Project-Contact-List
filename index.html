@@ -10,6 +10,11 @@
       integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
       crossorigin="anonymous"
     />
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
     <!-- Font Awesome  -->
     <link
       rel="stylesheet"
@@ -22,9 +27,46 @@
     <title>Contact List</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="container">
-        <div class="phone">bb</div>
+    <div
+      class="wrapper min-vh-100 d-flex justify-content-center align-items-center"
+    >
+      <div
+        class="phone border border-5 border-black rounded-5 shadow-lg bg-white overflow-y-scroll"
+        style="height: 600px; width: 300px"
+      >
+        <!-- Top Area Section: time and network -->
+        <div
+          class="text-success d-flex justify-content-between align-items-center"
+          style="height: 50px; padding: 10px"
+        >
+          <span>11:11</span>
+          <div class="bg-black w-25 rounded-pill" style="height: 1.4rem"></div>
+          <div>
+            <i class="bi bi-wifi"></i>
+            <i class="bi bi-reception-4"></i>
+            <i class="bi bi-battery"></i>
+          </div>
+        </div>
+        <!-- Home Screen Bottom  -->
+        <main class="homeScreen h-100 p-2 position-relative">
+          <div
+            class="slide-container bg-white p-3 rounded-4 shadow position-relative"
+            style="top: 400px"
+          >
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="0"
+              class="slider"
+              id="mySlider"
+              name=""
+            />
+            <label id="label" class="position-absolute text-center w-100"
+              >Slide to Unlock</label
+            >
+          </div>
+        </main>
       </div>
     </div>
   </body>

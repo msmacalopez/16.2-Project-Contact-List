@@ -1,8 +1,72 @@
 body {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: black;
 }
 .wrapper {
-  background: url(./rsc/bgphone.jpg);
-  min-height: 100vh;
+  background: url(./rsc/bgphone.jpg) no-repeat center;
+  background-size: cover;
+  /* min-height: 100vh; */
+}
+.phone {
+  background: url(./rsc/bgphone.jpg) no-repeat center;
+  background-size: cover;
+}
+.phone::-webkit-scrollbar {
+  display: none;
+}
+/* Home screen  */
+.slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* we need pseudoselector for the slider  */
+/* caniuse? only few browsers  */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(white, rgb(84, 0, 174));
+  border-radius: 50%;
+}
+
+/* the rest of browsers, like firefox  */
+.slider::-moz-range-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(white, rgb(84, 0, 174));
+  border-radius: 50%;
+}
+#label {
+  /* because position:abdsolute  */
+  top: 50%;
+  left: 50%;
+  /* transform only to make sure starts in 50% of parent  */
+  transform: translate(-50%, -50%);
+
+  /* To make text on top but pointer to salect slider, not text  */
+  pointer-events: none;
+  animation: slideAnimation 3s ease-in-out infinite;
+}
+
+@keyframes slideAnimation {
+  0%,
+  100% {
+    color: black;
+    filter: drop-shadow(0 0 10px purple);
+  }
+  50% {
+    color: purple;
+    filter: drop-shadow(0 0 10px purple);
+  }
 }
