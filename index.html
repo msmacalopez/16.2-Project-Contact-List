@@ -27,9 +27,11 @@
     <title>Contact List</title>
   </head>
   <body>
+    <!-- Wrapper class  -->
     <div
       class="wrapper min-vh-100 d-flex justify-content-center align-items-center"
     >
+      <!-- Phone class  -->
       <div
         class="phone border border-5 border-black rounded-5 shadow-lg bg-white overflow-y-scroll"
         style="height: 600px; width: 300px"
@@ -47,8 +49,11 @@
             <i class="bi bi-battery"></i>
           </div>
         </div>
-        <!-- Home Screen Bottom  -->
-        <main class="homeScreen h-100 p-2 position-relative">
+        <!-- Bottom: Home Screen -->
+        <main
+          style="display: block"
+          class="homeScreen h-100 p-2 position-relative"
+        >
           <div
             class="slide-container bg-white p-3 rounded-4 shadow position-relative"
             style="top: 400px"
@@ -65,6 +70,56 @@
             <label id="label" class="position-absolute text-center w-100"
               >Slide to Unlock</label
             >
+          </div>
+        </main>
+        <!-- Bottom: Apps Screen -->
+        <main
+          class="appScreen p-2 pt-5 bg-dark"
+          style="height: 540px; display: none"
+        >
+          <!-- put it in the middle and center horizontally: -->
+          <div class="d-flex justify-content-center">
+            <!-- make it grid and align children in center horizontally:  -->
+            <div class="d-flex flex-column align-items-center p-2">
+              <i
+                class="bi bi-person-rolodex text-danger fs-1 bg-white px-2 rounded"
+                onclick="displayContactListScreen()"
+              ></i>
+              <span class="text-white">Contact</span>
+            </div>
+          </div>
+        </main>
+        <!-- Bottom: Contacts Screen  -->
+        <main class="contactListScreen" style="height: 90%; display: none">
+          <div class="contactListContainer">
+            <!-- title  -->
+            <h2 class="p-2 fw-bolder">Contacts</h2>
+            <!-- search  -->
+            <div class="header mt-2 p-2 position-relative">
+              <i
+                class="bi bi-search position-absolute fs-4 m-1 text-secondary"
+              ></i>
+              <input
+                type="text"
+                id="search"
+                class="form-control rounded-pill"
+                placeholder="Search Contact"
+              />
+            </div>
+            <!-- spinner  -->
+            <div class="bg-light w-25 rounded m-auto p-3 showSpinner">
+              <div class="spinner-border text-success" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+            <!-- contact list  -->
+            <div id="list" class="bg-light pt-2" style="display: none">
+              <div class="p-2"><span id="userCount">10</span> Contacts</div>
+              <!-- accordion starts  -->
+              <div class="accordion mt-2" id="userAccordion">
+                <!-- Accordion item was removed  -->
+              </div>
+            </div>
           </div>
         </main>
       </div>

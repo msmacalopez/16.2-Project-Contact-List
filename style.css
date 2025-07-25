@@ -2,6 +2,10 @@ body {
   font-size: 1rem;
   color: black;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .wrapper {
   background: url(./rsc/bgphone.jpg) no-repeat center;
   background-size: cover;
@@ -48,7 +52,7 @@ body {
   border-radius: 50%;
 }
 #label {
-  /* because position:abdsolute  */
+  /* because position:absolute  */
   top: 50%;
   left: 50%;
   /* transform only to make sure starts in 50% of parent  */
@@ -63,10 +67,18 @@ body {
   0%,
   100% {
     color: black;
-    filter: drop-shadow(0 0 10px purple);
+    filter: drop-shadow(0 0 10px black);
   }
   50% {
     color: purple;
     filter: drop-shadow(0 0 10px purple);
   }
+}
+/* Contact List  */
+.header i {
+  right: 10px;
+}
+
+.appScreen i {
+  cursor: pointer;
 }
